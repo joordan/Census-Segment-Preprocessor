@@ -1,5 +1,4 @@
 # prompt user for file name
-
 filename = raw_input("Enter file name: ")
 if len(filename) < 1 : exit
 
@@ -11,6 +10,7 @@ outputname = filename[:idx] + "mod" + filename[idx:]
 inputfile = open(filename)                    
 outputfile = open(outputname,"w+")            
 
+# remove 1st 4 columns, write to file
 for line in inputfile:
 
 	row = line.split(',')
